@@ -1,0 +1,46 @@
+    1  ls /root/.cache/
+    2  ls /root/.cache/huggingface/
+    3  touch /root/.cache/huggingface/test.txt
+    4  rm-f /root/.cache/huggingface/test.txt
+    5  rm -rf /root/.cache/huggingface/test.txt
+    6  cd /TinyZero/
+    7  ls /root/.cache/huggingface/
+    8  ls /root/.cache/huggingface/hub
+    9  ls /root/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B/
+   10  export BASE_MODEL=/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B
+   11  export DATA_DIR=dataset
+   12  export ROLLOUT_TP_SIZE=1
+   13  export EXPERIMENT_NAME=countdown-qwen2.5-0.5b
+   14  export VLLM_ATTENTION_BACKEND=XFORMERS
+   15  bash ./scripts/train_tiny_zero.sh
+   16  pip install tensordict
+   17  bash ./scripts/train_tiny_zero.sh
+   18  pip install ray
+   19  bash ./scripts/train_tiny_zero.sh
+   20  pip install -r requirements.txt 
+   21  bash ./scripts/train_tiny_zero.sh
+   22  ls /root/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B/
+   23  ls /root/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B/snapshots/
+   24  ls /root/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B/snapshots/8faed761d45a263340a0528343f099c05c9a4323/
+   25  export BASE_MODEL=/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B/snapshots/8faed761d45a263340a0528343f099c05c9a4323/
+   26  export BASE_MODEL=/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B/snapshots/8faed761d45a263340a0528343f099c05c9a4323
+   27  bash ./scripts/train_tiny_zero.sh
+   28  pip install vllm
+   29  bash ./scripts/train_tiny_zero.sh
+   30  echo $N_GPUS
+   31  export N_GPUS=1
+   32  bash ./scripts/train_tiny_zero.sh
+   33  echo $ROLLOUT_TP_SIZE
+   34  echo $EXPERIMENT_NAME
+   35  bash ./scripts/train_tiny_zero.sh
+   36  pip uninstall flash-attn
+   37  pip install flash-attn --no-build-isolation
+   38  bash ./scripts/train_tiny_zero.sh
+   39  wandb-cli
+   40  wandb login
+   41  bash ./scripts/train_tiny_zero.sh
+   42  export N_GPUS=2
+   43  bash ./scripts/train_tiny_zero.sh
+   44  history
+   45  cat history > history.txt
+   46  history > history.txt

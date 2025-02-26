@@ -1,3 +1,14 @@
+N_GPUS=1
+# N_GPUS=2
+# BASE_MODEL=/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B/snapshots/8faed761d45a263340a0528343f099c05c9a4323
+# BASE_MODEL=/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B/snapshots/060db6499f32faf8b98477b0a26969ef7d8b9987
+BASE_MODEL=/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B/snapshots/060db6499f32faf8b98477b0a26969ef7d8b9987
+DATA_DIR=dataset
+ROLLOUT_TP_SIZE=1
+# EXPERIMENT_NAME=countdown-qwen2.5-3b-instruct
+# EXPERIMENT_NAME=countdown-qwen2.5-0.5b
+EXPERIMENT_NAME=countdown-qwen2.5-3b
+VLLM_ATTENTION_BACKEND=XFORMERS
 python3 -m verl.trainer.main_ppo \
 data.train_files=$DATA_DIR/train.parquet \
 data.val_files=$DATA_DIR/test.parquet \
